@@ -22,11 +22,11 @@ jobs:
     path: dotnet-samples
     persistCredentials: true
     displayName: 'Check out dotnet/samples repo'
-
-  - script: |
-      git clone https://blah:$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools ../dotnet-docs-tools
-    displayName: "Clone tools repo"
-
+#
+#  - script: |
+#      git clone https://blah:$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools ../dotnet-docs-tools
+#    displayName: "Clone tools repo"
+#
   - script: |
       echo Init dotnet
       dotnet help &> /dev/null
