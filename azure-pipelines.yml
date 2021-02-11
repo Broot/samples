@@ -16,7 +16,7 @@ pool:
 
 variables:
   solution: '**/core/getting-started/golden/golden.sln'
-  buildPlatform: 'Any CPU'
+  buildPlatform: 'x86'
   buildConfiguration: 'Release'
 
 steps:
