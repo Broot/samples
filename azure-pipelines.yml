@@ -15,7 +15,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/samples/core/getting-started/golden/golden.sln'
+  solution: '**/core/getting-started/golden/golden.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
