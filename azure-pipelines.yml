@@ -16,7 +16,7 @@ pool:
 
 variables:
   solution: '**/core/getting-started/golden/golden.sln'
-  buildPlatform: 'x86'
+  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
@@ -26,9 +26,12 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: CmdLine@2
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk'
   inputs:
-    script: 'nuget install NUnit3TestAdapter'
+    packageType: sdk
+    version: 2.1.x
+    installationPath: $(Agent.ToolsDirectory)/dotnet
 
 - task: VSBuild@1
   inputs:
